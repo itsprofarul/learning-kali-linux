@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this book or its companion material, please cite it as below."
+title: "Learning Kali Linux for Cybersecurity: Companion Repository"
+type: software
+authors:
+  - family-names: Natarajan
+    given-names: Arul Kumar
+    orcid: "https://orcid.org/0000-0002-9728-477X"
+repository-code: "https://github.com/itsprofarul/learning-kali-linux"
+url: "https://itsprofarul.github.io/learning-kali-linux/"
+preferred-citation:
+  type: book
+  title: "Learning Kali Linux for Cybersecurity: A Hands-on Beginner's Guide to Linux Commands, Networking, Security Tools, and Ethical Hacking"
+  authors:
+    - family-names: Natarajan
+      given-names: Arul Kumar
+      orcid: "https://orcid.org/0000-0002-9728-477X"
+  year: 2026
+  publisher:
+    name: "Independently published"
+  isbn: "979-8194572861"
+  edition: "1st"
+  url: "https://www.amazon.com/dp/B0HK25TJMS"

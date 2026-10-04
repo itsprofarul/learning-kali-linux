@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning Kali Linux for Cybersecurity | Dr. Arul Kumar Natarajan</title>
+<meta name="description" content="A hands-on beginner's guide to Linux commands, networking, security tools, and ethical hacking with Kali Linux. 545 pages, 13 chapters, 6 appendices. Free sample chapter.">
+<meta property="og:title" content="Learning Kali Linux for Cybersecurity">
+<meta property="og:description" content="A Hands-on Beginner's Guide to Linux Commands, Networking, Security Tools, and Ethical Hacking, by Dr. Arul Kumar Natarajan.">
+<meta property="og:image" content="https://itsprofarul.github.io/learning-kali-linux/assets/cover.jpg">
+<meta property="og:type" content="book">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Book","name":"Learning Kali Linux for Cybersecurity: A Hands-on Beginner's Guide to Linux Commands, Networking, Security Tools, and Ethical Hacking","author":{"@type":"Person","name":"Arul Kumar Natarajan","url":"https://itsprofarul.github.io/"},"isbn":"9798194572861","numberOfPages":545,"datePublished":"2026-09-16","bookEdition":"First Edition","image":"https://itsprofarul.github.io/learning-kali-linux/assets/cover.jpg","url":"https://www.amazon.com/dp/B0HK25TJMS"}
+</script>
+<style>
+:root{
+  --red:#c0392b;--red-dark:#962d22;--ink:#1d1d1f;--muted:#5b5b63;--bg:#ffffff;--soft:#f6f4f2;--line:#e6e2de;--code:#f1eeeb;
+}
+@media (prefers-color-scheme: dark){
+  :root{--red:#e0584a;--red-dark:#c0392b;--ink:#f1efed;--muted:#a9a6a3;--bg:#141414;--soft:#1d1c1b;--line:#2d2b29;--code:#232120;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Source Sans 3",system-ui,sans-serif;font-size:18px;line-height:1.6;color:var(--ink);background:var(--bg)}
+a{color:var(--red)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+nav .wrap{display:flex;gap:22px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+nav a:hover{color:var(--red)}
+nav .brand{margin-right:auto;font-family:"JetBrains Mono",monospace;color:var(--red)}
+.hero{background:var(--red);color:#fff;padding:64px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:260px 1fr;gap:56px;align-items:center}
+.hero img{width:100%;border-radius:4px;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.hero h1{font-size:46px;line-height:1.1;margin:0 0 14px;letter-spacing:-.5px}
+.hero .sub{font-size:21px;opacity:.95;margin:0 0 10px}
+.hero .by{font-size:18px;opacity:.9;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.primary{background:#fff;color:#962d22}
+.btn.ghost{border:2px solid rgba(255,255,255,.8);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:26px;font-size:15px;opacity:.92;font-family:"JetBrains Mono",monospace}
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+section.alt{background:var(--soft)}
+h2{font-size:30px;margin:0 0 20px;letter-spacing:-.3px}
+h2::before{content:"$ ";font-family:"JetBrains Mono",monospace;color:var(--red);font-size:24px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:20px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.part{margin:30px 0 10px;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);font-weight:700}
+details{border:1px solid var(--line);border-radius:8px;margin-bottom:10px;background:var(--bg)}
+summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none;display:flex;gap:12px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary .n{font-family:"JetBrains Mono",monospace;color:var(--red);min-width:2.2em}
+summary .pg{margin-left:auto;color:var(--muted);font-weight:400;font-size:14px;white-space:nowrap}
+summary .free{background:var(--red);color:#fff;font-size:12px;padding:2px 8px;border-radius:20px;font-weight:700}
+details ul{margin:0;padding:0 18px 16px 56px;color:var(--muted);font-size:16px}
+.term{background:#111;color:#e8e8e8;border-radius:8px;padding:18px 20px;font-family:"JetBrains Mono",monospace;font-size:15px;overflow-x:auto;line-height:1.7}
+.term .p{color:#ff6b5b}
+.term .c{color:#8a8a8a}
+.warn{border-left:5px solid var(--red);background:var(--soft);padding:18px 22px;border-radius:0 8px 8px 0;font-size:19px;font-weight:600}
+.cite{background:var(--code);padding:16px 18px;border-radius:8px;font-size:16px}
+.author{display:grid;grid-template-columns:1fr;gap:12px;max-width:760px}
+footer{padding:36px 0;color:var(--muted);font-size:15px;text-align:center}
+@media (max-width:760px){
+  .hero{padding:40px 0 48px}
+  .hero .wrap{grid-template-columns:1fr;gap:28px}
+  .hero img{max-width:200px;margin:0 auto;display:block}
+  .hero h1{font-size:34px}
+  .hero .sub{font-size:18px}
+  section{padding:44px 0}
+  summary .pg{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#">kali@book:~$</a>
+  <a href="#about">About</a>
+  <a href="#contents">Contents</a>
+  <a href="#sample">Sample</a>
+  <a href="#resources">Resources</a>
+  <a href="#cite">Cite</a>
+  <a href="#author">Author</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <img src="assets/cover.jpg" alt="Cover of Learning Kali Linux for Cybersecurity">
+  <div>
+    <h1>Learning Kali Linux for Cybersecurity</h1>
+    <p class="sub">A Hands-on Beginner's Guide to Linux Commands, Networking, Security Tools, and Ethical Hacking</p>
+    <p class="by">by Dr. Arul Kumar Natarajan</p>
+    <div class="btns">
+      <a class="btn primary" href="https://www.amazon.com/dp/B0HK25TJMS">Buy on Amazon</a>
+      <a class="btn ghost" href="sample/Learning_Kali_Linux_for_Cybersecurity_Sample.pdf">Read the free sample</a>
+    </div>
+    <div class="facts">
+      <span>545 pages</span><span>13 chapters</span><span>6 appendices</span><span>Paperback &amp; Kindle</span><span>ISBN 979-8194572861</span>
+    </div>
+  </div>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <h2>About the book</h2>
+  <p>A practical introduction to Kali Linux and the fundamentals you need to begin studying cybersecurity, written for readers with limited experience with Linux or security tools who want a clear, structured, hands-on learning path.</p>
+  <p>You start by installing Kali Linux in Oracle VirtualBox, build the Linux skills security work depends on, learn the networking concepts behind every scan and capture, and then put tools like Nmap, Wireshark, and Gobuster to work in a safe lab. Every chapter has explanations, commands, screenshots, review questions, and a hands-on lab.</p>
+  <div class="cols" style="margin-top:28px">
+    <div class="card"><h3>Linux foundations</h3><p>File system, users and permissions, APT, essential commands, and Bash scripting.</p></div>
+    <div class="card"><h3>Networking</h3><p>IP addressing, interfaces, DNS, routing, and troubleshooting from the terminal.</p></div>
+    <div class="card"><h3>Security tools</h3><p>Nmap, Wireshark, WHOIS, dig, theHarvester, Gobuster, FFUF, Nikto, and more.</p></div>
+    <div class="card"><h3>Ethics first</h3><p>Authorization, scope, and isolated practice labs are built into every chapter.</p></div>
+  </div>
+</div></section>
+
+<section id="contents" class="alt"><div class="wrap">
+  <h2>Table of contents</h2>
+
+  <div class="part">Part I · Getting Started with Kali Linux</div>
+  <details open><summary><span class="n">01</span>Introduction to Kali Linux <span class="free">FREE</span><span class="pg">p. 2</span></summary><ul><li>What is Kali Linux? · History and Development · Features and Advantages</li><li>Ethical and Legal Use · Kali Linux Editions · Kali Linux Architecture</li><li>Tool Introduction · Basic Commands · Hands-on Lab</li></ul></details>
+  <details><summary><span class="n">02</span>Installing and Configuring Kali Linux<span class="pg">p. 31</span></summary><ul><li>System Requirements · Installing Oracle VirtualBox · Importing the Kali VirtualBox Image</li><li>Virtual Machine Configuration · First Boot · Updating Kali Linux</li><li>Creating Snapshots · Troubleshooting Installation · Hands-on Lab</li></ul></details>
+  <details><summary><span class="n">03</span>Exploring the Kali Linux Desktop<span class="pg">p. 50</span></summary><ul><li>Desktop Environment · File Manager · Applications Menu · Terminal</li><li>Settings · Workspace Management · Customizing Kali Linux · Hands-on Lab</li></ul></details>
+
+  <div class="part">Part II · Linux Fundamentals</div>
+  <details><summary><span class="n">04</span>Linux File System and Navigation<span class="pg">p. 66</span></summary><ul><li>Linux Directory Structure · File Operations · Navigation Commands</li><li>Viewing File Contents · Searching Files · Hands-on Lab</li></ul></details>
+  <details><summary><span class="n">05</span>Users, Groups, and Permissions<span class="pg">p. 84</span></summary><ul><li>Linux Users · Linux Groups · File Ownership · File Permissions</li><li>Changing Permissions · Using sudo · Best Practices · Hands-on Lab</li></ul></details>
+  <details><summary><span class="n">06</span>Package Management and Software Installation<span class="pg">p. 104</span></summary><ul><li>APT Package Manager · Updating Packages · Installing Software · Removing Software</li><li>Managing Repositories · Installing Additional Security Tools · Hands-on Lab</li></ul></details>
+  <details><summary><span class="n">07</span>Essential Linux Commands<span class="pg">p. 123</span></summary><ul><li>File Management · Process Management · System Information · Disk Management</li><li>Networking · Compression · Help Commands · Hands-on Lab</li></ul></details>
+  <details><summary><span class="n">08</span>Bash Shell and Automation<span class="pg">p. 152</span></summary><ul><li>Bash Shell Basics · Variables · Conditional Statements · Loops</li><li>Writing Bash Scripts · Automating Tasks · Hands-on Lab</li></ul></details>
+
+  <div class="part">Part III · Networking Fundamentals</div>
+  <details><summary><span class="n">09</span>Linux Networking Essentials<span class="pg">p. 183</span></summary><ul><li>IP Addressing · Network Interfaces · Domain Name System (DNS) · Routing</li><li>Network Troubleshooting · Common Networking Commands · Hands-on Lab</li></ul></details>
+  <details><summary><span class="n">10</span>Network Scanning with Nmap<span class="pg">p. 214</span></summary><ul><li>Introduction to Nmap · Host Discovery · Port Scanning · Service Detection</li><li>Operating System Detection · Nmap Scripting Engine (NSE) · Practical Labs</li></ul></details>
+  <details><summary><span class="n">11</span>Packet Analysis with Wireshark<span class="pg">p. 242</span></summary><ul><li>Introduction to Wireshark · Capturing Packets · Understanding Packet Structure</li><li>Filtering Network Traffic · Protocol Analysis · Saving Packet Captures · Practical Exercises</li></ul></details>
+
+  <div class="part">Part IV · Cybersecurity Tools in Kali Linux</div>
+  <details><summary><span class="n">12</span>Information Gathering Tools<span class="pg">p. 278</span></summary><ul><li>WHOIS · nslookup · dig · traceroute · theHarvester · Practical Exercises</li></ul></details>
+  <details><summary><span class="n">13</span>Web Enumeration Tools<span class="pg">p. 308</span></summary><ul><li>Gobuster · Dirsearch · FFUF · Nikto · Practical Exercises</li></ul></details>
+
+  <div class="part">Appendices · p. 339</div>
+  <details><summary><span class="n">A–F</span>Reference material</summary><ul><li>A. Kali Linux Command Cheat Sheet · B. Linux Keyboard Shortcuts · C. Kali Linux Tool Categories</li><li>D. Frequently Asked Questions · E. Glossary of Linux and Cybersecurity Terms · F. Open-Source Cybersecurity Resources</li></ul></details>
+</div></section>
+
+<section id="sample"><div class="wrap">
+  <h2>Try Chapter 1 free</h2>
+  <p>The free sample includes the front matter, the complete table of contents, and <strong>Chapter 1: Introduction to Kali Linux</strong> in full, ending with this hands-on lab:</p>
+  <div class="term">
+<span class="c"># Lab 1.9: Exploring Your Kali Linux Environment</span><br>
+<span class="p">kali@kali:~$</span> whoami<br>
+kali<br>
+<span class="p">kali@kali:~$</span> pwd<br>
+/home/kali<br>
+<span class="p">kali@kali:~$</span> cat /etc/os-release<br>
+<span class="p">kali@kali:~$</span> mkdir Kali_Practice &amp;&amp; cd Kali_Practice<br>
+<span class="p">kali@kali:~/Kali_Practice$</span> touch notes.txt
+  </div>
+  <p class="btns" style="margin-top:22px"><a class="btn primary" style="background:var(--red);color:#fff" href="sample/Learning_Kali_Linux_for_Cybersecurity_Sample.pdf">Download the sample (PDF)</a></p>
+</div></section>
+
+<section id="resources" class="alt"><div class="wrap">
+  <h2>Companion resources</h2>
+  <div class="cols">
+    <a class="card" style="text-decoration:none;color:inherit" href="https://github.com/itsprofarul/learning-kali-linux/tree/main/labs"><h3>Hands-on labs →</h3><p>Step-by-step lab guides and helper scripts, starting with Chapter 1.</p></a>
+    <a class="card" style="text-decoration:none;color:inherit" href="https://github.com/itsprofarul/learning-kali-linux/tree/main/cheatsheets"><h3>Cheat sheets →</h3><p>Quick command references for each chapter.</p></a>
+    <a class="card" style="text-decoration:none;color:inherit" href="https://github.com/itsprofarul/learning-kali-linux/blob/main/ERRATA.md"><h3>Errata →</h3><p>Corrections and notes on newer software versions.</p></a>
+    <a class="card" style="text-decoration:none;color:inherit" href="https://github.com/itsprofarul/learning-kali-linux/issues/new/choose"><h3>Report an issue →</h3><p>Found a mistake or stuck on a lab? Let the author know.</p></a>
+  </div>
+  <p class="warn" style="margin-top:32px">Perform cybersecurity testing only on systems that you own or systems for which you have explicit authorization to test.</p>
+</div></section>
+
+<section id="cite"><div class="wrap">
+  <h2>How to cite</h2>
+  <p class="cite">Natarajan, A. K. (2026). <em>Learning Kali Linux for Cybersecurity: A Hands-on Beginner's Guide to Linux Commands, Networking, Security Tools, and Ethical Hacking</em>. Independently published. ISBN 979-8194572861.</p>
+</div></section>
+
+<section id="author" class="alt"><div class="wrap author">
+  <h2>About the author</h2>
+  <p><strong>Dr. Arul Kumar Natarajan</strong> is Professor and Program Head (Cybersecurity) at the School of Computing, Samarkand International University of Technology (SIUT), Uzbekistan. He has more than 15 years of academic and research experience in cybersecurity, AI for cybersecurity, machine learning for threat detection, network security, and explainable AI.</p>
+  <p class="btns">
+    <a class="btn" style="border:2px solid var(--red);color:var(--red)" href="https://itsprofarul.github.io/">Website</a>
+    <a class="btn" style="border:2px solid var(--red);color:var(--red)" href="https://scholar.google.com/citations?user=ejaQJu4AAAAJ&amp;hl=en">Google Scholar</a>
+    <a class="btn" style="border:2px solid var(--red);color:var(--red)" href="https://orcid.org/0000-0002-9728-477X">ORCID</a>
+  </p>
+</div></section>
+
+<footer><div class="wrap">
+  © 2026 Dr. Arul Kumar Natarajan. All rights reserved. · <a href="https://github.com/itsprofarul/learning-kali-linux">View on GitHub</a>
+</div></footer>
+
+</body>
+</html>
